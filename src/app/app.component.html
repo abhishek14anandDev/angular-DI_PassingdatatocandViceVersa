@@ -1,0 +1,48 @@
+<hello name="{{ name }}"></hello>
+<p>
+  <b>Table from parent component</b>
+</p>
+
+<table border ='1'>
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Age</th>
+      <th>Phone no</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of custdata">
+      <td>{{customer.name}}</td>
+      <td>{{customer.Age}}</td>
+      <td>{{customer.contactno}}</td>
+      <td>{{customer.address}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <b>Data got from child component</b>
+</p>
+
+<table border ='1'>
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Age</th>
+      <th>Phone no</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of custdatafromchild">
+      <td>{{customer.name}}</td>
+      <td>{{customer.Age}}</td>
+      <td>{{customer.contactno}}</td>
+      <td>{{customer.address}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-customer [custdatatochild]= "sendcustdata()" (custdatatoparents) = 'displaycustdatatoparents($event)'></app-customer>

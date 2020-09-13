@@ -17,7 +17,8 @@ export class ReactiveFormComponent implements OnInit {
     name : new FormControl(),
     lastname : new FormControl(),
     Address : new FormControl(),
-    Phonenum : new FormControl()
+    Phonenum : new FormControl(),
+    gender: new FormControl()     
   })
 
   onSubmit(){

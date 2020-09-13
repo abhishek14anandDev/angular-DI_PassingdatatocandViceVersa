@@ -1,0 +1,16 @@
+<form [formGroup] = "customerform" (ngSubmit)="onSubmit()">
+  <label> name : 
+    <input type="text" formControlName="name" required/>
+  </label> <br/>
+  <label> last name : 
+    <input type="text" formControlName="lastname" required/>
+  </label> <br/>
+    <label> Address : 
+    <input type="text" formControlName="Address" required/>
+  </label> <br/>
+    <label> PhoneNum : 
+    <input type="text" formControlName="Phonenum" required/>
+  </label> <br/>
+
+  <button type="submit">Submit</button>
+</form>

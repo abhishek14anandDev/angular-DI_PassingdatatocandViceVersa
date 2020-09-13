@@ -40,7 +40,7 @@
   </div>
 
   <label> Phone No </label>
-  <input type="text" name="customelastname" [(ngModel)]= "customer.contactnumber" #PhoneNum="ngModel" placeholder="Enter your Phone No" required minlength="10" ><br/>
+  <input type="text" name="customePhoneNo" [(ngModel)]= "customer.contactnumber" #PhoneNum="ngModel" placeholder="Enter your Phone No" required minlength="10" ><br/>
 
   <div *ngIf= "PhoneNum.invalid && (PhoneNum.dirty || PhoneNum.touched)" class="alert">
 
